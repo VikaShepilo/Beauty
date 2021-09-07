@@ -1,0 +1,375 @@
+// Помощники
+@import 'mixins/mixins';//миксины scss
+@import 'main/stylesheet';// шрифты
+@import 'main/parameters';// переменные
+
+//Общее
+@import 'main/reset'; // сброс стилей для кроссбраузерности
+@import 'main/common'; // общие стили
+//@import 'main/grid'; // базовая 12ти колоночная сетка для сайта(сделана на основе bootstrap), классы .container/.row/.col-md-6 и т.д.
+
+// дальше можно писать все стили сайта в этот файл, или писать их в компонентах
+.container {
+    width: 100%;
+    max-width: 1110px;
+    padding: 0 15px;
+    margin:  0 auto;
+
+}
+
+.btn {
+    @include btn;
+    color: inherit;
+    border-color: $c-primary;
+    transition: color ease 0.4s;
+    &:hover{
+        color: $c-primary;
+    }
+}
+.second {
+    position: relative; 
+    background-color: #EFEFEF;  
+    &__img {
+        width: 100%;
+        padding-bottom: 5rem;
+    }
+    &__white {
+        position: absolute;
+        left: 22rem;
+        top: 11rem;
+        bottom: 0;
+        width: 24%;
+        color: #FFFFFF;
+
+    }
+    &__whitetextbig {
+        font-weight: bold;
+        font-size: 4.8rem;
+        padding-bottom: 5rem;
+        color: #FFFFFF;
+    }
+    &__whitetextmin {
+        font-weight: normal;
+        font-size: 1.4rem;
+        padding-bottom: 5rem;
+        color: #FFFFFF;
+    }
+    &--bordered {
+        font-size: 1.4rem;
+        line-height: 1.6;
+        letter-spacing: 0.05em;
+        border-color: #FFFFFF;
+    }
+    &__title {
+        width: 100%;
+        padding-bottom: 3.8rem;
+        padding-top: 8rem;
+    }
+    &__row {
+        padding-bottom: 10rem;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+    }
+    &__col { 
+        width: 25%;  
+    }
+    &__rowpink {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 10rem;
+    }
+    &__rowpink1  {
+        width: 52.5rem;
+        height: 21.2rem;
+        background: url(./../imgs/fon1.jpg);
+        padding: 3.5rem 0 0 4rem;
+        background-size: cover; 
+    } 
+    &__rowpink2 {
+        width: 52.5rem;
+        height: 21.2rem;
+        background: url(./../imgs/fon2.jpg);
+        padding: 3.5rem 0 0 4rem;
+        background-size: cover; 
+    } 
+    &__text {
+        font-weight: bold;
+        font-size: 1.8rem;
+        color: #FFFFFF;
+        padding-bottom: 2.5rem;
+    }
+    &__text2 {
+        width: 23.1rem;
+        font-weight: normal;
+        font-size: 1.4rem;
+        color: #FFFFFF;
+        padding-bottom: 2.5rem;
+    }
+    &__btn {
+        display: inline-block;
+        color: white;
+        background: #F13C6E;
+        border: 2px solid #FFFFFF;
+        box-sizing: border-box;
+        border-radius: 3rem;
+    }
+    &__input {
+        width: 22.5rem;
+    }
+
+    &__col2 { 
+        background: white;
+    } 
+    &__row2 {
+        justify-content: center;
+        padding-bottom: 0rem;
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+    }  
+    &__row3 {
+        justify-content: center;
+        padding-bottom: 0rem;
+        width: 100%;
+        display: none;
+    } 
+    &__row4 {
+        justify-content: center;
+        padding-bottom: 0rem;
+        width: 100%;
+        display: none;
+    }
+}
+.product {
+    margin: 0 0 20px 20px;
+    background: white;
+    width: 25.5rem;
+    height: 36.3rem;
+    text-align: center;
+    &__img {
+        padding: 2rem 0;
+    }
+    &__title {
+        font-size: 1.4rem;
+        color: $c-text;
+        padding: 0 3rem 2rem 3rem;
+        text-align: center;
+    }
+    &__price {
+        font-weight: 500;
+        font-size: 2.1rem;
+        text-align: center;
+        letter-spacing: 0.05em;
+        color: $c-text;
+        padding-bottom: 2rem;
+    }
+    &__btn {
+        display: inline-block;
+        color: white;
+        background: #F13C6E;
+        border-radius: 30px;
+        width: 51%;
+    }
+}
+.impuls {
+    display: flex;
+    border: 1px solid $c-bg-gray;
+    &__img {
+        padding-top: 15%;
+        text-align: center;
+        width: 26.75rem;
+        height: 11.9rem;
+    }
+}
+.footer {
+    &__h2 {
+        width: 60%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 140.62%;
+        color: $c-text;
+        padding: 6rem 0 3rem 0;
+        border-bottom: 1px solid #EFEFEF;
+    }
+    &__box {
+        width: 100;
+    }
+    &__div {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__boxwithimg {
+        border-width: 100%;
+        border-top: 1px solid #EFEFEF;
+        display: flex;
+        align-items: center;
+    }
+    &__img {
+        padding: 2.7rem 2rem 3.8rem 0;
+    }
+    &__text {
+        padding: 0 1rem 0 18rem;
+        font-weight: normal;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        color: $c-text;
+    } 
+    &__tel {
+        height: 4rem;
+    } 
+    &__bottom {
+        height: 6.4rem;
+        background-color: #EFEFEF;        
+        font-weight: normal;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        color: #828282;
+    } 
+    &__bottomin {
+        width: 100%;
+        max-width: 1110px;
+        padding: 2.5rem 15px;
+        margin:  0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.nav3 {
+    
+    &__list {   
+        padding: 2.2rem 0 6rem 0;
+    }
+    &__link {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.2rem;
+        line-height: 2.8;
+        color: #828282;
+    }
+}
+.contact-phonebtn {
+    display: none;
+
+}
+.img__logo2 {
+    display: none;
+}
+
+@import 'components/header.scss';
+@import '../../pug/components/second.scss';
+@import 'components/footer.scss';
+
+
+
+@media screen and (max-width: 1439px) {
+    .search {
+        margin-left: 10rem;
+    }
+    .second__whitetextbig {
+        font-size: 4.0rem;
+        padding-bottom: 1.5rem;
+    }
+    .second__whitetextmin {
+        padding-bottom: 1.5rem;
+    }
+    .second__white {
+        left: 10rem;
+        top: 2rem;
+        bottom: 0;
+    }
+    .second__rowpink2,
+    .second__rowpink1 {
+        width: 47rem;
+        height: 21.2rem; 
+        background-position: top right;       
+    }
+    .impuls__img {
+        padding-top: 15%;
+        width: 24.5rem;
+        height: 10rem;
+    }
+    .footer__imgs {
+        width: 35%;
+    }
+    .footer__text {
+        padding: 0 5rem 0 5rem;
+    }
+    .contact-phonebtn {
+        display: block;
+        padding-left: 25rem;
+    }
+    .footer__tel {
+        display: none;
+    }
+}
+@media screen and (max-width: 1023px) {
+    .contact-phone {
+        display: none;
+    }
+    .search {
+        margin-right: 5rem;
+    }
+    .second__col {
+        flex: 1 0 33.3333%;
+        max-width: 33.3333%;
+    }
+    .second__rowpink {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .second__row2 {    
+        display: none;
+    }
+    .second__row3 {    
+        display: flex;
+        flex-wrap: nowrap;
+    }
+}
+@media screen and (max-width: 883px) {
+    .footer__text {
+        padding: 0 2rem 0 2rem;
+    }
+    .contact-phonebtn {
+        display: block;
+        padding-left: 1rem;
+    }
+    .second__whitetextbig {
+        font-size: 3.0rem;
+    }
+    .footer__img {
+        padding: 2.7rem 0.5rem 3.8rem 0;
+    }
+    .second__whitetextmin {
+        font-size: 1.0rem;
+    }
+
+}
+@media screen and (max-width: 750px) {
+    .second__row3 {
+        display: none;
+    }
+    .second__row4 {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .second__whitetextbig {
+        font-size: 2rem;
+    }
+    .nav2 {
+        display: none;
+    }
+    .img__logo1 {
+        display: none;
+    }
+    .img__logo2 {
+        display: block;
+    }
+}

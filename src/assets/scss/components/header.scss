@@ -1,0 +1,77 @@
+// для каждого компонента нужно импортить переменные, чтобы их использовать
+@import "../main/parameters";
+
+.header {
+    background: $c-bg-gray;
+}
+.nav {
+    &__list {
+        display: flex;
+        justify-content: center;
+        padding: 1.5rem 0;
+    }
+
+    &__item {
+        margin: 0 1.5rem;
+    }
+
+    &__link {
+        font-size: 1.4rem;
+    }
+}
+
+.header-middle {
+    border: 1px solid $c-bg-gray;
+    
+    &__inner {
+        display: flex;
+        align-items: center;
+        padding: 2rem 0;
+    }
+}
+
+.logo {
+    img{
+        max-width: 100%;
+    }
+}
+
+.search {
+    position: relative;
+    margin-left: auto;
+    &__field {
+        
+    }
+    &__btn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+    }
+    &__btn img {
+
+    }
+}
+
+.contact-phone {
+    font-size: 1.6rem;
+    color: inherit;
+    margin: 0 2rem 0 8rem;
+}
+
+.nav2 {
+    &__list {
+        display: flex;
+        justify-content: center;
+        padding: 3rem 0;
+    }
+
+    &__item {
+        margin: 0 1.5rem;
+    }
+
+    &__link {
+        font-size: 1.6rem;
+        color: #000000;
+    }
+}

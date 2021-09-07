@@ -1,0 +1,8 @@
+@import "../../assets/scss/main/parameters";
+@import "../mixins/mixins"
+
+section.second {
+    &__title {
+        @include title;
+    }
+}
